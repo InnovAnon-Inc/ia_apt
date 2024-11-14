@@ -159,6 +159,10 @@ async def download_keyring(url:str, keyring:Path,)->bool:
 async def ensure_sources_list(sources_list:Path,)->bool:
 	return await ensure_dir(dirpath=sources_list,)
 
+async def ensure_source_list(source_list:Path,)->bool:
+	# TODO
+	raise NotImplementeException()
+
 async def _main()->None:
 	result  :str  = await adpkg_f_install()
 	await logger.ainfo('f install     : %s', result,)
@@ -195,7 +199,7 @@ async def _main()->None:
 
 	src_url :str  = 'https://download.docker.com/linux/ubuntu'
 	srclist :Path = srcdir / 'docker.list'
-	await ensure_source_list(srclist=srclist,)
+	await ensure_source_list(source_list=srclist,)
 
 	result  :str  = await aapt_update()
 	await logger.ainfo('update        : %s', result,)
