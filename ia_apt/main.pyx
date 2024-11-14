@@ -109,7 +109,7 @@ async def aapt_autoremove()->str:
 	return await acheck_output(cmd, env=env, universal_newlines=True,)
 
 def _mkdir(sudo:str, dirpath:Path,)->Tuple[Command,Environment]:
-	_args:List[str]        = [ sudo, 'mkdir', '-m, '0755', '-p', '-v', ]
+	_args:List[str]        = [ sudo, 'mkdir', '--mode', '0755', '--parents', '--verbose', ]
 	env  :Environment      = dict(os.environ)
 	env['DEBIAN_FRONTEND'] = 'noninteractive'
 	return (_args, env,)
