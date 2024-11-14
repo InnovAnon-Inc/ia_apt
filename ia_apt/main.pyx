@@ -61,7 +61,7 @@ async def aapt_install(*pkgs:str,)->str:
 
 def _update_alternatives(pkg:str,)->Tuple[Command,Environment]:
 	# TODO
-	raise NotImplementedException()
+	raise NotImplementedError()
 
 async def aupdate_alternatives(pkg:str,)->str:
 	cmd:Command
@@ -140,7 +140,7 @@ async def download_keyring(url:str, keyring:Path,)->bool:
 	assert (not keyring.exists())
 
 	# TODO download
-	raise NotImplementeException()
+	raise NotImplementedError()
 
 	logger.info('downloaded keyring')
 
@@ -150,7 +150,7 @@ async def download_keyring(url:str, keyring:Path,)->bool:
 			f.write(data_asc) # TODO as root
 	else:
 		# TODO save
-		raise NotImplementeException()
+		raise NotImplementedError()
 	assert keyring.is_file()
 	logger.info('saved keyring: %s', keyring,)
 
@@ -162,7 +162,7 @@ async def ensure_sources_list(sources_list:Path,)->bool:
 
 async def ensure_source_list(source_list:Path,)->bool:
 	# TODO
-	raise NotImplementeException()
+	raise NotImplementedError()
 
 async def _main()->None:
 	result  :str  = await adpkg_f_install()
