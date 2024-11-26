@@ -4,7 +4,10 @@ services:
     build:
       context:        .
       tags:
-        - ia_apt:latest
+        - innovanon/ia_apt:latest
+        -           ia_apt:latest
+        - innovanon/ia_apt
+        -           ia_apt
     restart:          no
     logging:
       driver:         syslog   
