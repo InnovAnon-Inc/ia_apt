@@ -1,4 +1,4 @@
-FROM ia_elevate as elevate
+FROM ia_elevate      AS elevate
 FROM ia_check_output AS check_output
 
 COPY --from=elevate /tmp/py/ /tmp/py/
