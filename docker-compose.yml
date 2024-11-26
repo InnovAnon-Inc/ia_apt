@@ -8,6 +8,7 @@ services:
         -           ia_apt:latest
         - innovanon/ia_apt
         -           ia_apt
+    image:            innovanon/ia_apt
     restart:          no
     logging:
       driver:         syslog   
