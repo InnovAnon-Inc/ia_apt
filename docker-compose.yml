@@ -5,9 +5,9 @@ services:
       context:        .
       tags:
         - innovanon/ia_apt:latest
-        -           ia_apt:latest
-        - innovanon/ia_apt
-        -           ia_apt
+    #    -           ia_apt:latest
+    #    - innovanon/ia_apt
+    #    -           ia_apt
     image:            innovanon/ia_apt
     restart:          no
     logging:
