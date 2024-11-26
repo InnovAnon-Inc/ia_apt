@@ -1,5 +1,6 @@
 FROM innovanon/ia_elevate      AS elevate
-FROM innovanon/ia_check_root   AS check_root # TODO
+# TODO
+FROM innovanon/ia_check_root   AS check_root
 FROM innovanon/ia_check_output AS check_output
 FROM innovanon/ia_setup        AS setup
 
